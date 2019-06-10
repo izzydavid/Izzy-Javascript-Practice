@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src = "main.js"> </script>
+
+</head>
+
+<body>
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+</body>
+
+//Izzy walkthrough on the introduction of Javascript on 10JUN2019
+<script>
+// One way to create a variable types 
+var a = 20; 
+var b = 20;  
+var sum = a + b; 
+
+// Second way to create a variable types
+var a, b, sum; 
+a = 20; 
+b = 20; 
+sum = a + b; 
+
+// Third way to create a variable types
+
+var a = 20, b = 20, sum = a + b; 
+console.log(sum);
+
+// Creating a variable with a string
+var a = "My name is David"; 
+console.log(a);
+
+// How your code can automatically declare your variables without you specifiying their declarations. 
+// The alternatives of CONST and LENTs are the other methods to get around this issues.
+// Since this issue would create issues for us later on. 
+a = 10; 
+console.log(a);
+
+//Topic is Data Types 
+//String Data Type
+var name = "David \"it's\" Irizarry"; 
+console.log(name);
+
+//Numeric Data Type 
+var num1 = 123456789; 
+var num2 = 1231415135.1232141235112313; 
+
+console.log(num1, num2);
+
+//Boolean Data Type
+
+var bool1 = true; 
+var bool2 = false; 
+var bool3 = 1; //1 is true and 0 is false in boolean data type
+var bool4 = 0; //0 is false in boolean data type
+
+//Undefined data 
+var hey; 
+console.log(hey);
+
+//Null data type 
+var hey2 =  null; 
+console.log(typeof bool3); //When you type typeof it does not necessarily mean the data type is an object, 
+//the browswer does not know how to define a "null"
+
+//Assignment Operators is the third topic 
+
+// =
+// +=
+// -=
+// *= 
+// /=
+// %= 
+//Cannot have the operators not commented out when trying to console log your javascript. 
+var number = 10; 
+// number = number + 5; 
+number += 5; 
+console.log(number);
+
+//Arithmetic Operators
+
+// +
+// -
+// *
+// /
+//Cannot have the operators not commented out when trying to console log your javascript. 
+var number2 = 5 * 10; 
+console.log(number2);
+
+
+
+//String Operators is the Fourth Topic
+var age = 33; 
+var info = "My name is David, I am " + age + " years old, and I am a software developer wannabe!"
+
+console.log(info);
+
+var numbers = 4 + " " + 5; 
+console.log(numbers);
+
+//Conditional Statement is the Fifth Topic 
+
+var x = 10; 
+var y = 50; 
+
+//Example of how to comparison operator == to see if the value is the same as the declared var x. 
+//Example of an OR operator is what is known as the pipes symbol "||" to see if one of the if statements are true; 
+//return the conlsole log with the "If!" string. 
+//Example of when we want more than one if statement to be true we would use the "&&" term between each comparison 
+//Example of an if & else & else if statement and how the script is reading the statement in sequence, therefore if the
+//first statement is true, it will not go through the rest of the else if or else statement because the first if statement
+//was true
+if (x == 10 && y < 20) {  
+    console.log("If!");
+}   else if (x > 50) { 
+    console.log("Else if!"); 
+}   else if (x > 50) { 
+    console.log("Else if!"); 
+}   else if (x > 50) { 
+    console.log("Else if!"); 
+}   else {
+    console.log("Else!"); 
+}
+
+var gender = "Male"; 
+var age = 18; 
+
+if (gender == "Male") {
+    if (age === 18) { 
+        console.log("You are a " + gender + " and above the age limit");
+    } else { 
+    console.log("Sorry dude!");
+    }
+} else if (gender == "Female") {
+  if (age >= 18) { 
+    console.log("You are a " + gender + " and above the age limit");
+  } else { 
+      console.log("Sorry lady!");
+  }  
+} else { 
+    console.log("Can't figure out your gender!");
+}
+
+//How to create an arrays in Javascript is the sixth topic
+
+var items = ["Bottle", "Camera", "Juice"]; 
+var items;
+console.log(items[0]);
+
+var items = ["Bottle", 4, true];  //This is an array which contains a string, integer, and boolean logic
+items[1] = 8; //This is a way to re-assign the value to an array 
+console.log(items[1]); //This is console loging the position 1 in the var items arrray, the reason why 4 is console logged; 
+//is because the position of an array is 0,1,2 since we only have three data types in the array. 
+
+//Javascript Properties and Methods is the seventh topic 
+var item = "Bottle of water"; 
+console.log(item.length); //The period after the item is letting you do something with this property or method. You get 15
+//because it is counting the number of characters including the spaces of the string. 
+
+console.log(item.indexOf("of")); //We need to always use a pair of parathesis after indexOf defines that we are using a method
+//or function 
+console.log(item.substring(7, 9)); //Substring does something different, allows us to cut off a certain object or string at a 
+//certain point 7 is the position of the space before the word "of" and 9 is the space after the word "of". 
+console.log(item.replace("water", "Juice")); //Example of how to replace something within the declared variable water turned into juice. 
+console.log(item.toUpperCase());//Method of how to make the variable capitalized 
+
+var items = ["Bottles", 4, true]; 
+items.pop(); //Removes the last piece of data type within the string
+console.log(items.join(" | & | "));//This pulls all the data types in the array together but without spaces unless specified in the (). 
+console.log(items.join(", "));
+items.push("Juice"); 
+console.log(items.push("Juice"));
+
+//How to create a Javascript Functions is the eigth topic. 
+//A Function is a set of instructions or reuse our code later in our scripts: Immediate results, 
+//name function, annoynomous function, immediate function expression. 
+
+</script> 
+
+
+
+
+</html>
