@@ -1,31 +1,122 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
+<!-- [if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]
+[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]
+[if IE 8]>         <html class="no-js lt-ie9"> <![endif]
+[if gt IE 8]><! -->
 <html class="no-js">
 <!--<![endif]-->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <script src = "main.js"> </script>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Added a link to Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Added a link to our external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
 
 </head>
 
-<body>
+<body background="calculator.png"> "
 
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <!-- Jumbotron for Title -->
+    <h1 class="text-center">Izz's Javascript Calculator</h1>
 
-</body>
 
-//Izzy walkthrough on the introduction of Javascript on 10JUN2019
+    <div class="container text-center">
+        <!-- Calculator Card -->
+        <div class="card">
+            <input class="textview" name="textview">
+
+        </div>
+
+        <div class="card-body">
+            <button id="button-1" class="btn btn-primary number" onclick="insert(1)" value="1">
+                <span>1</span>
+            </button>
+            <button id="button-2" class="btn btn-primary numbe" onclick="insert(2)" value="2">
+                <span>2</span>
+            </button>
+            <button id="button-3" class="btn btn-primary number" onclick="insert(3)" value="3">
+                <span>3</span>
+            </button>
+            <button id="button-plus" class="btn btn-danger operator" onclick="insert(+)" value="plus">
+                <span>+</span>
+            </button>
+            <br /><br />
+            <button id="button-4" class="btn btn-primary number" onclick="insert(4)" value="4">
+                <span>4</span>
+            </button>
+            <button id="button-5" class="btn btn-primary number" onclick="insert(5)" value="5">
+                <span>5</span>
+            </button>
+            <button id="button-6" class="btn btn-primary number" onclick="insert(6)" value="6">
+                <span>6</span>
+            </button>
+            <button id="button-minus" class="btn btn-danger operator" onclick="insert(-)" value="minus">
+                <span>&minus;</span>
+            </button>
+            <br /><br />
+            <button id="button-7" class="btn btn-primary number" onclick="insert(7)" value="7">
+                <span>7</span>
+            </button>
+            <button id="button-8" class="btn btn-primary number" onclick="insert(8)" value="8">
+                <span>8</span>
+            </button>
+            <button id="button-9" class="btn btn-primary number" onclick="insert(9)" value="9">
+                <span>9</span>
+            </button>
+            <button id="button-multiply" class="btn btn-danger operator" onclick="insert(*)" value="times">
+                <span>&times;</span>
+            </button>
+            <br /><br />
+            <button id="button-0" class="btn btn-primary number" onclick="insert(0)" value="0">
+                <span>0</span>
+            </button>
+            <button id="button-divide" class="btn btn-danger operator" onclick="insert(/)" value="divide">
+                <span>&divide;</span>
+            </button>
+            <button id="button-power" class="btn btn-danger operator" onclick="insert(%)" value="power">
+                <span>^</span>
+            </button>
+            <button id="button-equal" class="btn btn-success equal" onclick="insert(=)" value="equals">
+                <span>=</span>
+            </button>
+            <br /><br />
+            <button id="button-clear" class="btn btn-dark clear" onclick="insert(clear)" value="clear">
+                <span>clear</span>
+            </button>
+
+            <button id="button-clear" class="btn btn-dark back onclick" value="back">
+                <span>
+                    < </span> </button> </div> </div> </div> </div> </div> </div> </div> </div> <!-- //Example of how to
+                        create a simple calculator in javascript. -->
+
+                        <form> 
+            Value 1: <input type = "text" id = "value1"> 
+            Value 2: <input type = "text" id = "value2"> 
+            Operator: 
+        
+            <select id = "operator"> 
+                <option value ="add">Add </option>
+                <option value ="min">Minus </option>
+                <option value ="div">Divide </option>
+                <option value ="mul">Multiply </option>
+            </select>
+            <button type = "button" onclick="calc()">Calculate</button>    <div id = "results"> </div> </form>
+            <!-- //Adding a events directly 
+            //into the html as attributes which combines html and javascript together. -->
+     
+
+
+<!-- //Izzy walkthrough on the introduction of Javascript on 10JUN2019 -->
 <script>
 // One way to create a variable types 
 var a = 20; 
@@ -39,7 +130,6 @@ b = 20;
 sum = a + b; 
 
 // Third way to create a variable types
-
 var a = 20, b = 20, sum = a + b; 
 console.log(sum);
 
@@ -103,8 +193,6 @@ console.log(number);
 //Cannot have the operators not commented out when trying to console log your javascript. 
 var number2 = 5 * 10; 
 console.log(number2);
-
-
 
 //String Operators is the Fourth Topic
 var age = 33; 
@@ -192,9 +280,63 @@ console.log(items.push("Juice"));
 //A Function is a set of instructions or reuse our code later in our scripts: Immediate results, 
 //name function, annoynomous function, immediate function expression. 
 
+// //Please look at the main.js file for the function examples. -->
+
+//Example of how to console log an array with the instructions of making the second 
+//statement lowercase based on the toLowerCase method. 
+var drinks = ["Coke", "Pepsi", "Water", "Orange Juice"];
+    // ...
+
+    console.log("First statement");
+    console.log(drinks[0]);
+    console.log(drinks[1]);
+    console.log(drinks[2]);
+    console.log(drinks[3]);
+
+    //The syntax for below array.map(function(currentValue, index, arr), thisValue)
+    drinks = drinks.map(function(a) { return a.toLowerCase() })      
+
+
+    console.log("Second statement");
+    console.log(drinks[0]);
+    console.log(drinks[1]);
+    console.log(drinks[2]);
+    console.log(drinks[3]);
+
+
+//Example of how to console log and alert based on the first letter found in a array;
+//In this example if the first letter of an array started with a C it would state
+//this starts with a C and the same response if the letter started with an O. 
+    var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+      var arrayLength = myFarm.length; 
+      for (var i = 0; i < arrayLength; i++) {
+     
+      console.log (myFarm[i]);
+
+
+      if (myFarm[i].charAt(0) === "c")  {  
+
+        alert ("Starts with an C!")  
+      
+      } else if (myFarm[i].charAt(0) === "o") 
+
+        alert ("Starts with an O!")
+    }
+      
+
+
+
+
+Swal.fire({
+    title: 'Error!',
+    text: 'Do you want to continue',
+    type: 'error',
+    confirmButtonText: 'Cool'
+  })
+  
 </script> 
-
-
-
+</html>
+<script src="main.js"></script>
+</body>
 
 </html>

@@ -1,0 +1,40 @@
+/* Select all spans that are immediate children of buttons */
+.btn > span {
+    font-size: 2.5rem;
+}
+
+.textview { 
+    width: 300px; 
+    float: right; 
+    padding: inherit; 
+    height: 50px;
+    background-color: burlywood; 
+   line-height: 10px; 
+
+}
+.card-header { 
+    width: 300px; 
+    background-color: white; 
+}
+
+.card-body { 
+    background-color: burlywood; 
+    width: 300px; 
+    background-position: center; 
+    
+
+}
+
+
+.card { 
+    background-color: transparent; 
+    border: 0px;
+
+}
+
+h1 { 
+    background-color: transparent; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white; 
+    font-size: 50px; 
+}
